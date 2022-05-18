@@ -1,0 +1,14 @@
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+.btn:hover {
+  color: $primary;
+}
+
+button:focus {
+  color: $primary;
+}
+
+.card {
+  border-radius: 0;
+}

@@ -1,0 +1,23 @@
+{
+  "resume": {
+    "title": "{{name}}'s Resume",
+    "location": "{{city}}, {{region}}",
+    "show": "Show {{sectionTitle}} section",
+    "hide": "Hide {{sectionTitle}} section",
+    "dateRangeStart": "{{date}} to ",
+    "presentTime": "Present",
+    "work": {
+      "title": "Experience",
+      "subTitle": "{{position}} at {{company}}"
+    },
+    "volunteer": {
+      "title": "Volunteering",
+      "subTitle": "{{position}} with {{org}}"
+    },
+    "education":{"title":"Education","subTitle": "{{type}} of {{area}}"},
+    "awards": {"title":"Awards", "subTitle": "{{title}} (Awarded by {{awarder}})"},
+    "certificates": {"title":"Certificates","subTitle": "{{name}} (Issued by {{issuer}})","verify": "Verify","sinceDate":  "Since {{date}}"},
+    "skills": {"title":"Skills"},
+    "about": {"title":"About","contact": "Contact","profiles": "Profiles"}
+  }
+}

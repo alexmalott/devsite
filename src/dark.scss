@@ -1,0 +1,105 @@
+$crt-glow: #00aa00;
+$theme-colors: (
+  "primary": $crt-glow
+);
+$body-bg: transparent;
+$card-bg: #111a11;
+$card-border-color: #fff;
+
+html {
+  height:100%;
+  background: linear-gradient(rgb(0,30,0) 50%, rgb(0,20,0) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 4px, 3px 100%;
+}
+
+.cursor {
+  user-select: none;
+  opacity: 0;
+  animation: cursor 1200ms linear infinite;
+}
+
+@keyframes cursor {
+  55% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 100;
+  }
+}
+
+.glow-text {
+  color: #fff;
+  animation: glow-text 10s ease-in-out infinite alternate;
+}
+
+.glow-borders {
+  animation: glow-borders 10s ease-in-out infinite alternate;
+}
+
+$glow-primary: $crt-glow;
+$glow-secondary: darken($crt-glow, 20%);
+
+@keyframes glow-text {
+  from {
+    text-shadow: 0 0 5px $glow-primary, 0 0 10px $glow-secondary, 0 0 15px $glow-secondary, 0 0 20px $glow-secondary, 0 0 25px $glow-secondary;
+  }
+  to {
+    text-shadow: 0 0 10px $glow-primary, 0 0 15px $glow-secondary, 0 0 20px $glow-secondary, 0 0 25px $glow-secondary, 0 0 30px $glow-secondary;
+  }
+}
+
+@keyframes glow-borders {
+  from {
+    box-shadow: 0 0 5px $glow-primary, 0 0 10px $glow-secondary, 0 0 15px $glow-secondary, 0 0 20px $glow-secondary, 0 0 25px $glow-secondary;
+  }
+  to {
+    box-shadow: 0 0 10px $glow-primary, 0 0 15px $glow-secondary, 0 0 20px $glow-secondary, 0 0 25px $glow-secondary, 0 0 30px $glow-secondary;
+  }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+.btn {
+  color: #fff
+}
+
+h1 h2 h3 h4 h5 h6 {
+  color: #fff
+}
+
+.btn:hover {
+  color: #fff;
+  animation: glow-text 10s ease-in-out infinite alternate;
+}
+
+button:focus {
+  color: #fff;
+  animation: glow-text 0.5s ease-in-out infinite alternate;
+}
+
+a {
+  color: $crt-glow
+}
+
+a:hover {
+  color: darken($crt-glow, 10%)
+}
+
+.card {
+  color: #fff;
+  border-radius: 2px;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+ul li:before
+{
+  content: '>';
+  font-weight: bold;
+  opacity: 50%;
+  margin: 0 0.25em 0 1em;
+}
