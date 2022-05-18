@@ -1,0 +1,20 @@
+<accordion-group [(isOpen)]="startOpen">
+  <button class="btn btn-block justify-content-between d-flex w-100 shadow-none"
+          accordion-heading type="button"
+          [attr.aria-label]="(startOpen ? 'resume.hide' : 'resume.show') | translate : {'sectionTitle': title}"
+  >
+    <h3>
+      <i [class]="'me-1 bi bi-' + icon + '-fill'" aria-hidden=true></i>
+      {{ title }}
+    </h3>
+    <h3 class="float-end" aria-hidden=true>
+      <i *ngIf="startOpen; else closed" [class]="'me-2 bi bi-caret-up'"></i>
+      <ng-template #closed>
+        <i [class]="'me-2 bi bi-caret-down'"></i>
+      </ng-template>
+    </h3>
+  </button>
+  <div class="accordion-body">
+    <ng-content></ng-content>
+  </div>
+</accordion-group>

@@ -1,0 +1,125 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="glow-text">
+      <h1>> {{resume.basics.name}}</h1>
+      <h1>> {{resume.basics.label}}</h1>
+      <h1>> {{'resume.location' | translate: {city: resume.basics.location.city, region: resume.basics.location.region} }}<span *ngIf="currentTheme === 'dark'" class="cursor">_</span></h1>
+    </div>
+  </div>
+<div class="row mt-2">
+  <div class="col-xxl-2 col-xl-3 col-md-4">
+    <accordion class="glow-borders" [isAnimated]="true">
+      <resume-section [title]="'resume.about.title' | translate" [icon]="'info-circle'" [startOpen]=true>
+        <h3>{{'resume.about.contact' | translate}}</h3>
+          <a [href]="'mailto:' + resume.basics.email" class="text-center text-decoration-none"><h4><i class="me-1 bi bi-envelope-fill" aria-hidden=true></i>Email</h4></a>
+          <a [href]="'tel:' + resume.basics.phone" class="text-center text-decoration-none"><h4><i class="me-1 bi bi-phone-fill" aria-hidden=true></i>Cell</h4></a>
+        <h3 class="mt-4">{{'resume.about.profiles' | translate}}</h3>
+          <a *ngFor="let profile of resume.basics.profiles" [href]="profile.url" class="text-center text-decoration-none">
+            <h4><i [class]="'me-1 bi bi-' + profile.network.toLowerCase()" aria-hidden=true></i>{{profile.network}}</h4>
+          </a>
+      </resume-section>
+    <resume-section [title]="'resume.skills.title' | translate" [icon]="'compass'" [startOpen]=true>
+      <div *ngFor="let skill of resume.skills; let i = index">
+        <h4>{{skill.name}}</h4>
+        <h5 class="blockbadges"><span class="badge bg-primary" *ngFor="let keyword of skill.keywords">{{keyword}}</span></h5>
+      </div>
+    </resume-section>
+    </accordion>
+    </div>
+  <div class="col-xxl-10 col-xl-9 col-md-8">
+    <accordion class="glow-borders" [isAnimated]="true">
+      <resume-section [title]="'resume.work.title' | translate" [icon]="'briefcase'" [startOpen]=true>
+        <div *ngFor="let job of resume.work; let i = index">
+          <hr *ngIf="i > 0">
+          <div class="row">
+            <div class="col-6">
+              <h4>{{'resume.work.subTitle' | translate: {position: job.position, company: job.name} }}</h4>
+            </div>
+            <div class="col-6 text-end">
+              <h4>{{'resume.dateRangeStart' | translate: {date: formatDate(job.startDate) } }} {{job.endDate ? formatDate(job.endDate) : 'resume.presentTime' | translate}}</h4>
+            </div>
+          </div>
+          <h5>
+            {{job.summary}}
+          </h5>
+          <ul>
+            <li *ngFor="let highlight of job.highlights">{{highlight}}</li>
+          </ul>
+        </div>
+      </resume-section>
+
+      <resume-section [title]="'resume.education.title' | translate" [icon]="'mortarboard'" [startOpen]=true>
+        <div *ngFor="let education of resume.education; let i = index">
+          <hr *ngIf="i > 0">
+          <div class="row">
+            <div class="col-6">
+              <h4>{{'resume.education.subTitle' | translate: {type: education.studyType, area: education.area} }}</h4>
+            </div>
+            <div class="col-6 text-end">
+              <h4>{{'resume.dateRangeStart' | translate: {date: formatDate(education.startDate) } }} {{education.endDate ? formatDate(education.endDate) : 'resume.presentTime' | translate}}</h4>
+            </div>
+          </div>
+          <h5>
+            {{education.institution}}
+          </h5>
+          <ul>
+            <li *ngFor="let course of education.courses">{{course}}</li>
+          </ul>
+        </div>
+      </resume-section>
+      <resume-section [title]="'resume.certificates.title' | translate" [icon]="'clipboard-check'">
+        <div *ngFor="let certificate of resume.certificates; let i = index">
+          <hr *ngIf="i > 0">
+          <div class="row">
+            <div class="col-6">
+              <h4>{{'resume.certificates.subTitle' | translate: {name: certificate.name, issuer: certificate.issuer} }}</h4>
+            </div>
+            <div class="col-6 text-end">
+              <h4>{{'resume.certificates.sinceDate' | translate : {date: formatDate(certificate.date)} }}</h4>
+            </div>
+          </div>
+          <h5>
+            <a [href]="certificate.url" target="_blank">Verify</a>
+          </h5>
+        </div>
+      </resume-section>
+      <resume-section [title]="'resume.volunteer.title' | translate" [icon]="'heart'">
+        <div *ngFor="let volunteer of resume.volunteer; let i = index">
+          <hr *ngIf="i > 0">
+          <div class="row">
+            <div class="col-6">
+              <h4>{{'resume.volunteer.subTitle' | translate: {position: volunteer.position, org: volunteer.organization} }}</h4>
+            </div>
+            <div class="col-6 text-end">
+              <h4>{{'resume.dateRangeStart' | translate: {date: formatDate(volunteer.startDate) } }} {{volunteer.endDate ? formatDate(volunteer.endDate) : 'resume.presentTime' | translate}}</h4>
+            </div>
+          </div>
+          <h5>
+            {{volunteer.summary}}
+          </h5>
+          <ul>
+            <li *ngFor="let highlight of volunteer.highlights">{{highlight}}</li>
+          </ul>
+        </div>
+      </resume-section>
+
+      <resume-section [title]="'resume.awards.title' | translate" [icon]="'award'">
+        <div *ngFor="let award of resume.awards; let i = index">
+          <hr *ngIf="i > 0">
+          <div class="row">
+            <div class="col-6">
+              <h4>{{'resume.awards.subTitle' | translate: {title: award.title, awarder: award.awarder} }}</h4>
+            </div>
+            <div class="col-6 text-end">
+              <h4>{{formatDate(award.date)}}</h4>
+            </div>
+          </div>
+          <h5>
+            {{award.summary}}
+          </h5>
+        </div>
+      </resume-section>
+    </accordion>
+  </div>
+</div>
+</div>

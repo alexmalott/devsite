@@ -1,0 +1,198 @@
+{
+  "comment": "Congrats on finding the JSON!  Please don't parse it for anything nefarious.  Thanks!",
+  "basics": {
+    "name": "Alex Malott",
+    "label": "Software Engineer",
+    "email": "alex@alexmalott.com",
+    "phone": "+1720-346-4293",
+    "url": "https://alexmalott.com",
+    "summary": "Please help im trapped in a resume factory and i cant get out",
+    "location": {
+      "city": "Fort Collins",
+      "countryCode": "US",
+      "region": "Colorado"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "alexmalott",
+        "url": "https://github.com/alexmalott"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "alex-malott",
+        "url": "https://www.linkedin.com/in/alex-malott/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Micro Focus",
+      "position": "Lead UI Engineer",
+      "url": "https://www.microfocus.com/en-us/solutions/simplify-it-transformation",
+      "startDate": "2021-07-12",
+      "summary": "Lead a team of three UI engineers developing an Angular UI for managing Helm deployments",
+      "highlights": [
+        "Acted as UI lead for six sprints during primary UI lead's parental leave, then promoted to UI lead",
+        "Conducted team trainings on Angular, RxJS and Cypress",
+        "Participated extensively in Agile PI and Sprint planning activities"
+      ]
+    },
+    {
+      "name": "Micro Focus",
+      "position": "UI Engineer",
+      "url": "https://www.microfocus.com/en-us/solutions/simplify-it-transformation",
+      "startDate": "2020-04-01",
+      "endDate": "2021-07-12",
+      "summary": "Developed an Angular UI for managing Helm deployments across the entire ITOM business group",
+      "highlights": [
+        "Trained and mentored three recently graduated UI engineers",
+        "Assumed primary responsibility for Cypress (Integration and End to End) tests",
+        "Also contributed numerous Java API fixes and features"
+      ]
+    },
+    {
+      "name": "Hewlett Packard Enterprise",
+      "position": "DevTools Engineer",
+      "url": "https://www.hpe.com/us/en/integrated-systems/software.html",
+      "startDate": "2019-01-01",
+      "endDate": "2020-04-01",
+      "summary": "Created and maintained developer tooling for HPE's flagship OneView product",
+      "highlights": [
+        "Maintained several Django web apps for collecting and displaying key group-wide development metrics",
+        "Maintained a custom CentOS common development environment image",
+        "Independently created a custom Raspberry Pi controlled \"traffic light\" to display DevTools server statuses"
+      ]
+    },
+    {
+      "name": "HP Inc.",
+      "position": "Remote Graphics Software Intern",
+      "url": "https://www.hp.com/us-en/workstations/zcentral-remote-boost.html",
+      "startDate": "2016-05-01",
+      "endDate": "2018-05-01",
+      "summary": "Assisted an Agile software team developing a multiplatform high performance remote desktop application",
+      "highlights": [
+        "Built custom hardware and software tools that extended existing performance tests across every platform",
+        "Introduced bug report tooling for Windows, Linux, and macOS"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "VR Concussion Assessment Project",
+      "position": "Lead Engineer",
+      "url": "https://www.youtube.com/watch?v=i4Q-x29NbP4",
+      "startDate": "2018-10-01",
+      "endDate": "2019-06-01",
+      "summary": "Lead a full redesign of a Ram Reality create-a-thon project for CSU's Department of Occupational Therapy",
+      "highlights": [
+        "Worked extensively with OT department staff to establish and refine requirements",
+        "Demonstrated project to students, faculty, and potential donors"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Colorado State University",
+      "url": "https://www.colostate.edu/",
+      "area": "Computer Science",
+      "studyType": "Bachelor",
+      "startDate": "2016-01-01",
+      "endDate": "2019-05-18",
+      "courses": [
+        "CS414 - Object Oriented Design",
+        "CS430 - Database Systems",
+        "CS457 - Computer Networks and the Internet",
+        "CS475 - Parallel Programming"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Ram Reality First Place",
+      "date": "2018-11-01",
+      "awarder": "Colorado State University",
+      "summary": "Developed an innovative VR tool for assessing concussion severity in 48 hours.  Competed against ten other similar teams and projects.",
+      "url": "https://source.colostate.edu/concussion-testing-project-wins-ramreality-create-a-thon/"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certified SAFe® 5 Practitioner",
+      "date": "2022-01-24",
+      "issuer": "Scaled Agile, Inc",
+      "url": "https://www.credly.com/badges/fbc19c10-6e68-4d62-966a-e44b6ef2bc39"
+    },
+    {
+      "name": "Certified SAFe® 5 Agilist",
+      "date": "2022-01-27",
+      "issuer": "Scaled Agile, Inc",
+      "url": "https://www.credly.com/badges/11bd2a4c-ccd6-47be-a837-a5f36265844e"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Front-End",
+      "level": "Master",
+      "keywords": [
+        "Angular",
+        "Bootstrap",
+        "TypeScript",
+        "JavaScript",
+        "Localization",
+        "Accessibility",
+        "Cypress",
+        "Jasmine",
+        "HTML",
+        "CSS",
+        "React",
+        "Qt"
+      ]
+    },
+    {
+      "name": "Back-End",
+      "level": "Advanced",
+      "keywords": [
+        "Java",
+        "JUnit",
+        "Python",
+        "Node.js",
+        "Helm",
+        "Kubernetes",
+        "Docker",
+        "C",
+        "C++",
+        "OpenMP",
+        "CUDA"
+      ]
+    },
+    {
+      "name": "Miscellaneous",
+      "keywords": [
+        "Git",
+        "GitHub",
+        "IntelliJ",
+        "Linux",
+        "RHEL",
+        "CentOS",
+        "Fedora",
+        "Windows",
+        "Liquibase",
+        "PostgreSQL",
+        "Agile",
+        "Jenkins",
+        "GIMP",
+        "Unreal Engine",
+        "Blender",
+        "Raspberry Pi",
+        "Arduino"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ]
+}
