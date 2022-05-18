@@ -2,19 +2,22 @@
   <div class="row">
     <div class="glow-text">
       <h1>> {{resume.basics.name}}</h1>
-      <h1>> {{resume.basics.label}}</h1>
-      <h1>> {{'resume.location' | translate: {city: resume.basics.location.city, region: resume.basics.location.region} }}<span *ngIf="currentTheme === 'dark'" class="cursor">_</span></h1>
+      <!-- If it's stupid, but it works, is it really stupid? -->
+      <!-- Yeah it is... -->
+      <!-- In my defense it's midnight and I'm getting tired.  TODO: fix this I guess -->
+      <h1><span class="invisible">></span> {{resume.basics.label}}</h1>
+      <h1><span class="invisible">></span> {{'resume.location' | translate: {city: resume.basics.location.city, region: resume.basics.location.region} }}<span *ngIf="currentTheme === 'dark'" class="cursor">_</span></h1>
     </div>
   </div>
 <div class="row mt-2">
   <div class="col-xxl-2 col-xl-3 col-md-4">
     <accordion class="glow-borders" [isAnimated]="true">
-      <resume-section [title]="'resume.about.title' | translate" [icon]="'info-circle'" [startOpen]=true>
+      <resume-section [title]="'resume.about.title' | translate" [icon]="'info-circle'" [startOpen]=true class="text-center">
         <h3>{{'resume.about.contact' | translate}}</h3>
-          <a [href]="'mailto:' + resume.basics.email" class="text-center text-decoration-none"><h4><i class="me-1 bi bi-envelope-fill" aria-hidden=true></i>Email</h4></a>
-          <a [href]="'tel:' + resume.basics.phone" class="text-center text-decoration-none"><h4><i class="me-1 bi bi-phone-fill" aria-hidden=true></i>Cell</h4></a>
+          <a [href]="'mailto:' + resume.basics.email" class="text-decoration-none"><h4><i class="me-1 bi bi-envelope-fill" aria-hidden=true></i>Email</h4></a>
+          <a [href]="'tel:' + resume.basics.phone" class="text-decoration-none"><h4><i class="me-1 bi bi-phone-fill" aria-hidden=true></i>Cell</h4></a>
         <h3 class="mt-4">{{'resume.about.profiles' | translate}}</h3>
-          <a *ngFor="let profile of resume.basics.profiles" [href]="profile.url" class="text-center text-decoration-none">
+          <a *ngFor="let profile of resume.basics.profiles" [href]="profile.url" class="text-decoration-none">
             <h4><i [class]="'me-1 bi bi-' + profile.network.toLowerCase()" aria-hidden=true></i>{{profile.network}}</h4>
           </a>
       </resume-section>
@@ -122,4 +125,7 @@
     </accordion>
   </div>
 </div>
+  <div class="row">
+
+  </div>
 </div>
